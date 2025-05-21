@@ -29,7 +29,16 @@ minutes = our_seconds // 60
 
 print(f'{hours}:{minutes}:{seconds}')
 
+# 3. Узнайте у пользователя число n. Найдите сумму чисел n + nn + nnn.
+# Например, пользователь ввёл число 3. Считаем 3 + 33 + 333 = 369.
 
+n = input('Введите число n: ')
+nn = 2 * n
+nnn = 3 * n
+
+result = (int(n) + int(nn) + int(nnn))
+
+print(f'{n} + {nn} + {nnn} = {result}')
 
 
 
