@@ -5,7 +5,7 @@
 """
 import threading
 import time
-
+unit_4.3.py
 lock = threading.Lock()
 
 def worker(num):
@@ -84,6 +84,7 @@ for t in threads:
 # одна функция должна ждать 2 секунды, вторая — 1 секунду, третья — 4 секунды. 
 # Выведите, в каком порядке функции завершатся.
 
+"""
 import asyncio
 
 async def foo_1():
@@ -136,3 +137,23 @@ thread_3.start()
 thread_1.join()
 thread_2.join()
 thread_3.join()
+
+"""
+
+#Напишите асинхронную программу, которая одновременно выполняет несколько операций: 
+#три задачи, каждая из которых будет ждать по 1 секунде, выводя сообщение после завершения.
+
+import asyncio
+
+async def task():
+    await asyncio.sleep(1
+    
+    )
+    print('Задача завершена')
+
+async def main():
+    tasks= [task() for _ in range(3)]
+
+    await asyncio.gather(*tasks)
+
+asyncio.run(main())
